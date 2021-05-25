@@ -7,7 +7,7 @@ export default function handler(req, res) {
     switch (method){
       case 'GET':
         checkUserParams(body)
-        res.status(200).json({name: checkedParams.name, email: checkedParams.email})
+        res.status(200).json({name: body.name, email: body.email})
         break
       default:
         res.setHeader('Allow', ['GET']);
